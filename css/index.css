@@ -15,53 +15,114 @@
     font-size: 20px;
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    padding-top: 30px;
+    padding-top: 45px;
 }
 
+.main-heading{
+    color: navy;
+}
+
+.main-heading-sub-1{
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+
+ 
+}
+
+
 .first-heading{
-    color: black;
+    color: lightblue;
     font-weight: 1000;
     font-size: 25px;
 }
 
 .sub-heading{
-    color: navy;
+    color: white;
     font-size: 25px;
     font-weight: 700;
 }
 
 .btn-1{
-    width: 150px;
+    width: 200px;
     height: 40px;
-    background-color:blue;
+    background-color:white;
     align-items: center;
-    color: white;
+    color: blue;
     border-radius: 8px;
-    border: 2px solid black;
+    border: 2px solid blue;
     margin-top: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .btn-1:hover{
     cursor: pointer;
-    background-color: coral;
+    background-color: blue;
+    color: white;
 }
 
 .sub-main-container{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;  
-    padding-top: 450px;
+    justify-content: space-around;  
+    padding-top: 150px;
 }
 
 .numbers{
     font-size: 50px;
     font-weight: 600;
     color: darkblue;
-    
+    display: flex;
+    justify-content:center ;   
 }
 
 .sub-info{
     color: white;
     font-size: 20px;
-    padding-right: 5px;
+    padding-right:8px;
+    padding-left: 8px ;
+}
+
+.main-search-box{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 30px;
+    margin-left: 10px;
+    margin-top: 60px;
+    background-color: white;
+    width: 800px;
+    padding: 15px;
+    border-radius: 30px;
+    justify-content: center;
+}
+
+.search-item-box{
+     display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.serarch-input{
+     border: none;
+    outline: none;
+    font-size: 16px;
+    justify-content: center;
+}
+
+.date-input{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    justify-content: center;
+}
+
+.btn-search{
+    height: 35px;
+    width: 80px;
+    color: white;
+    background-color: navy;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid navy;
 }

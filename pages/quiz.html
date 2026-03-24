@@ -4,131 +4,15 @@
 <meta charset="UTF-8">
 <title>Career Quiz</title>
 
-<style>
-body{
-    margin:0;
-    font-family:Arial;
-    background:linear-gradient(135deg,#6a11cb,#2575fc);
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <link rel="stylesheet" href="./../css/navbar.css">
+    <link rel="stylesheet" href="./../css/footer.css">
+    <link rel="stylesheet" href="./../css/quiz.css">
 
-
-.step-control{
-    display:none;
-}
-
-
-.quiz-box{
-    width:450px;
-    background:#fff;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.2);
-}
-
-
-.progress{
-    height:8px;
-    background:#eee;
-    border-radius:10px;
-    margin-bottom:20px;
-}
-
-.progress-bar{
-    height:100%;
-    background:#2575fc;
-    width:20%;
-    border-radius:10px;
-    transition:0.4s;
-}
-
-
-.step{
-    display:none;
-    animation:fade 0.4s ease;
-}
-
-#q1:checked ~ .quiz-box .step1,
-#q2:checked ~ .quiz-box .step2,
-#q3:checked ~ .quiz-box .step3,
-#q4:checked ~ .quiz-box .step4,
-#q5:checked ~ .quiz-box .step5,
-#q6:checked ~ .quiz-box .result{
-    display:block;
-}
-
-
-#q1:checked ~ .quiz-box .progress-bar{width:20%;}
-#q2:checked ~ .quiz-box .progress-bar{width:40%;}
-#q3:checked ~ .quiz-box .progress-bar{width:60%;}
-#q4:checked ~ .quiz-box .progress-bar{width:80%;}
-#q5:checked ~ .quiz-box .progress-bar{width:100%;}
-
-
-.question{
-    font-size:18px;
-    font-weight:bold;
-    margin-bottom:15px;
-}
-
-
-.option{
-    display:block;
-    padding:12px;
-    border:2px solid #ddd;
-    border-radius:10px;
-    margin:10px 0;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.option:hover{
-    border-color:#2575fc;
-    background:#f0f4ff;
-}
-
-
-.option input{
-    display:none;
-}
-
-
-.option input:checked + span{
-    color:#2575fc;
-    font-weight:bold;
-}
-
-
-.next-btn{
-    display:block;
-    margin-top:15px;
-    padding:10px;
-    background:#2575fc;
-    color:#fff;
-    border-radius:6px;
-    text-align:center;
-    cursor:pointer;
-}
-
-
-.result{
-    text-align:center;
-}
-
-
-@keyframes fade{
-    from{opacity:0;}
-    to{opacity:1;}
-}
-</style>
 </head>
 
 <body>
-
-     <nav class="navbar">
+<nav class="navbar">
      <div class="logo-container">
                 <img src="./../images/logo.png" alt="logo" class="logo">
                 <h1>Route<span class="Up">Up</span></h1>
@@ -148,8 +32,6 @@ body{
     <li><a href="./about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
 </ul>
 </nav>
-
-
 <input type="radio" name="step" id="q1" class="step-control" checked>
 <input type="radio" name="step" id="q2" class="step-control">
 <input type="radio" name="step" id="q3" class="step-control">
@@ -157,64 +39,152 @@ body{
 <input type="radio" name="step" id="q5" class="step-control">
 <input type="radio" name="step" id="q6" class="step-control">
 
+<div class="main-layout">
+
+<!-- LEFT -->
+<div class="left-panel">
+    <img src="./../images/confusion.png">
+
+    <h1>Confused About Your Career?</h1>
+    <p>Answer 5 quick questions and discover your perfect career instantly.</p>
+
+    <div class="feature"><i class="fa-solid fa-star"></i> Trusted by 10,000+ students</div>
+    <div class="feature"><i class="fa-solid fa-bolt"></i> Quick quiz</div>
+    <div class="feature"><i class="fa-solid fa-brain"></i> Smart analysis</div>
+    <div class="feature"><i class="fa-solid fa-chart-line"></i> Growth insights</div>
+</div>
+
+<!-- RIGHT -->
 <div class="quiz-box">
+<div class="quiz-inner">
 
-<div class="progress">
-    <div class="progress-bar"></div>
+<div class="quiz-header">
+    <h2>Career Aptitude Test</h2>
+    <p>Only takes 2 minutes</p>
+
+    <div class="quiz-info">
+        <span>5 Questions</span>
+        <span>Instant Result</span>
+    </div>
 </div>
 
+<div class="progress"><div class="progress-bar"></div></div>
 
+<!-- STEP 1 -->
 <div class="step step1">
-    <div class="question">1. What do you enjoy the most?</div>
-    <label class="option"><input type="radio" name="a1"><span>Coding / Technology</span></label>
-    <label class="option"><input type="radio" name="a1"><span>Designing / Creativity</span></label>
-    <label class="option"><input type="radio" name="a1"><span>Business / Management</span></label>
-    <label for="q2" class="next-btn">Next</label>
+<div class="question">1. What do you enjoy the most?</div>
+
+<label class="option"><input type="radio" name="a1"><span>1)</span><i class="fa-solid fa-code"></i> Coding</label>
+<label class="option"><input type="radio" name="a1"><span>2)</span><i class="fa-solid fa-palette"></i> Design</label>
+<label class="option"><input type="radio" name="a1"><span>3)</span><i class="fa-solid fa-briefcase"></i> Business</label>
+
+<label for="q2" class="next-btn">Next</label>
 </div>
 
-
+<!-- STEP 2 -->
 <div class="step step2">
-    <div class="question">2. What is your strongest skill?</div>
-    <label class="option"><input type="radio" name="a2"><span>Logical Thinking</span></label>
-    <label class="option"><input type="radio" name="a2"><span>Creativity</span></label>
-    <label class="option"><input type="radio" name="a2"><span>Leadership</span></label>
-    <label for="q3" class="next-btn">Next</label>
+<div class="question">2. What is your strongest skill?</div>
+
+<label class="option"><input type="radio" name="a2"><span>1)</span><i class="fa-solid fa-brain"></i> Logical Thinking</label>
+<label class="option"><input type="radio" name="a2"><span>2)</span><i class="fa-solid fa-lightbulb"></i> Creativity</label>
+<label class="option"><input type="radio" name="a2"><span>3)</span><i class="fa-solid fa-users"></i> Leadership</label>
+
+<label for="q3" class="next-btn">Next</label>
 </div>
 
+<!-- STEP 3 -->
 <div class="step step3">
-    <div class="question">3. Which subject do you like most?</div>
-    <label class="option"><input type="radio" name="a3"><span>Computer / Maths</span></label>
-    <label class="option"><input type="radio" name="a3"><span>Arts / Design</span></label>
-    <label class="option"><input type="radio" name="a3"><span>Commerce</span></label>
-    <label for="q4" class="next-btn">Next</label>
+<div class="question">3. Which subject do you like most?</div>
+
+<label class="option"><input type="radio" name="a3"><span>1)</span><i class="fa-solid fa-calculator"></i> Maths</label>
+<label class="option"><input type="radio" name="a3"><span>2)</span><i class="fa-solid fa-paintbrush"></i> Arts</label>
+<label class="option"><input type="radio" name="a3"><span>3)</span><i class="fa-solid fa-chart-line"></i> Commerce</label>
+
+<label for="q4" class="next-btn">Next</label>
 </div>
 
-
+<!-- STEP 4 -->
 <div class="step step4">
-    <div class="question">4. What type of job do you prefer?</div>
-    <label class="option"><input type="radio" name="a4"><span>Technical Job</span></label>
-    <label class="option"><input type="radio" name="a4"><span>Creative Job</span></label>
-    <label class="option"><input type="radio" name="a4"><span>Management Job</span></label>
-    <label for="q5" class="next-btn">Next</label>
+<div class="question">4. What type of job do you prefer?</div>
+
+<label class="option"><input type="radio" name="a4"><span>1)</span><i class="fa-solid fa-laptop-code"></i> Technical</label>
+<label class="option"><input type="radio" name="a4"><span>2)</span><i class="fa-solid fa-pen-nib"></i> Creative</label>
+<label class="option"><input type="radio" name="a4"><span>3)</span><i class="fa-solid fa-user-tie"></i> Management</label>
+
+<label for="q5" class="next-btn">Next</label>
 </div>
 
-
+<!-- STEP 5 -->
 <div class="step step5">
-    <div class="question">5. What is your career goal?</div>
-    <label class="option"><input type="radio" name="a5"><span>Software Engineer</span></label>
-    <label class="option"><input type="radio" name="a5"><span>Designer</span></label>
-    <label class="option"><input type="radio" name="a5"><span>Entrepreneur</span></label>
-    <label for="q6" class="next-btn">Submit</label>
+<div class="question">5. What is your career goal?</div>
+
+<label class="option"><input type="radio" name="a5"><span>1)</span><i class="fa-solid fa-code"></i> Software Engineer</label>
+<label class="option"><input type="radio" name="a5"><span>2)</span><i class="fa-solid fa-palette"></i> Designer</label>
+<label class="option"><input type="radio" name="a5"><span>3)</span><i class="fa-solid fa-rocket"></i> Entrepreneur</label>
+
+<label for="q6" class="next-btn">Submit</label>
 </div>
 
-
+<!-- RESULT -->
 <div class="step result">
-    <h2>🎯 Suggested Career</h2>
-    <p>💻 IT / 🎨 Design / 📊 Business</p>
-  >
+<h3>Suggested Career</h3>
+<p>IT / Design / Business</p>
+</div>
+
+</div>
 </div>
 
 </div>
 
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+            <h2 class="footer-logo">
+                <img src="./../images/logo.png" alt="RouteUp Logo">
+                RouteUp
+            </h2>
+            <p>Navigate your future with clarity and confidence.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <a href="./../index.html"><i class="fa-solid fa-house"></i> Home</a>
+             <a href="./about.html"><i class="fa-solid fa-circle-info"></i> About</a>
+            <a href="./about.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-links">
+            <h4>Career Tools</h4>
+             <a href="./explore.html"><i class="fa-solid fa-compass"></i> Explore</a>
+            <a href="./compare.html"><i class="fa-solid fa-code-compare"></i> Compare</a>
+            <a href="./quiz.html"><i class="fa-solid fa-circle-question"></i> Quiz</a>
+           
+        </div>
+
+        <!-- Social -->
+        <div class="footer-social">
+            <h4>Connect</h4>
+            <p>Stay updated with us</p>
+            <div class="social-icons">
+                <a href="./pages/https://www.linkedin.com/in/sanskruti-chikhlonde-042a4b374?utm_source=share_via&utm_content=profile&utm_medium=member_android"> <i class="fa-solid fa-globe"></i></a>
+               <a href="https://www.instagram.com/sanskruti_chikhlonde?igsh=eWk3d3BjcjR4eWlh"> <i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/sanskruti-chikhlonde-042a4b374?utm_source=share_via&utm_content=profile&utm_medium=member_android"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/sanskruti-chikhlonde"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+        <p>© 2026 RouteUp. All rights reserved.</p>
+    </div>
+
+</footer>
 </body>
 </html>

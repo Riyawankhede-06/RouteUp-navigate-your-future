@@ -1,0 +1,226 @@
+body{
+    margin:0;
+   font-weight: bolder;
+    background:linear-gradient(135deg,#fff7ed,#ffe7d6);
+}
+
+/* RADIO */
+.step-control{
+    display:none;
+}
+
+/* LAYOUT */
+.main-layout{
+    display:flex;
+ margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* LEFT PANEL */
+.left-panel{
+    flex:1;
+    padding:100px 80px;
+    
+}
+.left-panel img{
+    width:500px;
+    display:block;
+    margin:0 auto;
+}
+
+.left-panel h1{
+    font-size:48px;
+    color:#7c2d12;
+    margin-top:20px;
+    line-height:1.2;
+}
+
+.left-panel p{
+    color:#7c6a5d;
+    margin:25px 0;
+    font-size:18px;
+    text-align: center;
+}
+
+.feature{
+    margin-top:15px;
+    color:#7c6a5d;
+ padding: 0px;
+   text-align: center;
+}
+
+
+.feature i{
+    color:#f97316;
+    margin-right:10px;
+    
+}
+
+/* RIGHT SIDE */
+.quiz-box{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+/* PREMIUM PANEL */
+.quiz-inner{
+    width:100%;
+    max-width:450px;
+    padding:50px;
+    background:rgba(255,255,255,0.6);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+}
+
+/* HEADER */
+.quiz-header{
+    text-align:center;
+}
+
+.quiz-header h2{
+    color:#ea580c;
+    font-size:28px;
+}
+
+.quiz-header p{
+    color:#7c6a5d;
+}
+
+.quiz-info{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    color:#9a3412;
+}
+
+/* PROGRESS */
+.progress{
+    height:6px;
+    background:#fde7d3;
+    margin:25px 0 50px;
+    border-radius:10px;
+}
+
+.progress-bar{
+    height:100%;
+    width:20%;
+    background:#ea580c;
+    border-radius:10px;
+}
+
+/* QUESTION */
+.question{
+    font-size:26px;
+    color:#7c2d12;
+    margin-bottom:30px;
+    font-weight:600;
+}
+
+/* OPTIONS */
+.option{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin:15px 0;
+    padding:15px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+    color: #f97316;
+}
+
+.option:hover{
+    background:#fff3e8;
+}
+
+/* ICON */
+.option i{
+    color:#f97316;
+}
+
+/* NUMBER */
+.option span{
+    font-weight:600;
+    color:#7c2d12;
+}
+
+/* SELECT */
+.option input{
+    display:none;
+}
+
+.option:has(input:checked){
+    background:#ffe4d1;
+    color:#ea580c;
+    font-weight:600;
+}
+
+/* BUTTON */
+.next-btn{
+    display:block;
+    margin:40px auto 0;
+    width:100%;
+    padding:16px;
+    background:linear-gradient(135deg,#ea580c,#c2410c);
+    color:#fff;
+    text-align:center;
+    border-radius:12px;
+    cursor:pointer;
+    font-size: 20px;
+    transition:0.3s;
+}
+
+.next-btn:hover{
+    transform:translateY(-2px);
+}
+
+/* STEPS */
+.step{
+    display:none;
+}
+
+#q1:checked ~ .main-layout .step1,
+#q2:checked ~ .main-layout .step2,
+#q3:checked ~ .main-layout .step3,
+#q4:checked ~ .main-layout .step4,
+#q5:checked ~ .main-layout .step5,
+#q6:checked ~ .main-layout .result{
+    display:block;
+}
+
+/* PROGRESS */
+#q1:checked ~ .main-layout .progress-bar{width:20%;}
+#q2:checked ~ .main-layout .progress-bar{width:40%;}
+#q3:checked ~ .main-layout .progress-bar{width:60%;}
+#q4:checked ~ .main-layout .progress-bar{width:80%;}
+#q5:checked ~ .main-layout .progress-bar{width:100%;}
+
+/* RESULT */
+.result{
+    text-align:center;
+}
+
+.result h3{
+    color:#9a3412;
+}
+
+.result p{
+    color:#7c6a5d;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .main-layout{
+        flex-direction:column;
+    }
+
+    .left-panel{
+        text-align:center;
+        padding:40px;
+    }
+}
